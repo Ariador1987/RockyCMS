@@ -5,7 +5,10 @@
             <h2 class="text-primary">Application Type List</h2>
         </div>
         <div class="col-6 text-right">
-            <a class="p-2 rounded bg-primary text-light text-decoration-none" asp-controller="ApplicationType" asp-action="Create">Create New Application Type</a>
+            <a class="p-2 rounded bg-primary text-light text-decoration-none" asp-controller="ApplicationType" asp-action="Create">
+                <i class="fas fa-plus"></i>
+                &nbsp;Create New Application Type
+            </a>
         </div>
     </div>
 
@@ -31,7 +34,16 @@
                 {
                     <tr>
                         <td width="100%">@appType.Name</td>
-                        <td></td>
+                        <td class="text-center">
+                            <div class="w-75 btn-group justify-content-around" role="group">
+                                <a asp-controller="ApplicationType" asp-route-id="@appType.Id" asp-action="Edit" class="btn btn-primary text-capitalize mx-2">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a asp-controller="ApplicationType" asp-route-id="@appType.Id" asp-action="Delete" class="btn btn-danger text-capitalize mx-2">
+                                    <i class="far fa-trash-alt"></i>
+                                </a>
+                            </div>
+                        </td>
                     </tr>
                 }
             </tbody>

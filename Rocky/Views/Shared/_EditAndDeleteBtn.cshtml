@@ -1,0 +1,10 @@
+﻿@model int
+
+<div class="w-75 btn-group mx-auto" role="group">
+    <a asp-controller="Category" asp-route-id="@Model" asp-action="Edit" class="btn btn-primary text-capitalize mx-2">
+        <i class="fas fa-edit"></i>
+    </a>
+    <a asp-controller="Category" asp-route-id="@Model" asp-action="Delete" class="btn btn-danger text-capitalize mx-2">
+        <i class="far fa-trash-alt"></i>
+    </a>
+</div> 
