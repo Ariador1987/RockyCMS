@@ -22,6 +22,8 @@ namespace Rocky.Models
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
         public virtual Category Category { get; set; }
-
+        [ForeignKey(nameof(ApplicationTypeId))]
+        public virtual ApplicationType ApplicationType { get; set; }
+        public int ApplicationTypeId { get; set; }
     }
 }
