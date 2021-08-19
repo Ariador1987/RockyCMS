@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Rocky.Models.ViewModels
 {
-    public class ProductUpsertVM
+    public class ProductVM
     {
-        public IEnumerable<SelectListItem> SelectListItems { get; set; }
         public Product Product { get; set; }
+        public IEnumerable<SelectListItem> CategorySelectList { get; set; }
     }
 }

@@ -13,6 +13,7 @@ namespace Rocky.Models
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
         [Range(1, int.MaxValue, ErrorMessage = "Range must be higher then 1")]
         public double Price { get; set; }
