@@ -29,6 +29,12 @@
                     <th>
                         Price
                     </th>
+                    <th>
+                        Category
+                    </th>
+                    <th>
+                        Application Type
+                    </th>
                     <th></th>
                 </tr>
             </thead>
@@ -36,8 +42,10 @@
                 @foreach (var product in Model)
                 {
                     <tr>
-                        <td width="50%">@product.Name</td>
-                        <td width="30%">@product.Price</td>
+                        <td width="30%">@product.Name</td>
+                        <td width="10%">@product.Price</td>
+                        <td width="20%">@product.Category.Name</td>
+                        <td width="20%">@product.ApplicationType.Name</td>
                         <td class="text-center">
                             <div class="w-75 btn-group mx-auto" role="group">
                                 <a asp-route-id="@product.Id" asp-action="Upsert" class="btn btn-primary text-capitalize mx-2">
